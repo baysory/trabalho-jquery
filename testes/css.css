@@ -1,0 +1,37 @@
+.minha-lista {  
+ 
+    padding: 0; /* Remove o padding padrão */  
+    margin: 0; /* Remove a margem padrão */  
+}  
+
+.tarefa-item {  
+    display: flex; /* Usa flexbox para alinhar os itens */  
+    align-items: center; /* Alinha os itens verticalmente no centro */  
+    margin-bottom: 10px; /* Espaço entre os itens */  
+    padding: 5px; /* Espaçamento interno */  
+    border: 1px solid #ccc; /* Borda para diferenciar tarefas */  
+}  
+
+.botao-lixeira, .botao-negativo, .botao-positivo {  
+    background: none; /* Remove o fundo padrão do botão */  
+    border: none; /* Remove borda do botão */  
+    cursor: pointer; /* Altera o cursor ao passar o mouse */  
+    padding: 0; /* Remove o padding padrão */ 
+     max-width: 30px;
+}  
+
+.icone {  
+    width: 24px; /* Ajuste o tamanho conforme necessário */  
+    height: 24px; /* Ajuste o tamanho conforme necessário */  
+}  
+
+.icone-negativo {  
+    flex: 1; /* Isso faz o ícone negativo ocupar espaço entre os ícones */  
+    display: flex;  
+    justify-content: center; /* Centraliza o ícone negativo dentro do espaço */  
+}  
+
+.tarefa-item span {  
+    flex: 2; /* O texto da tarefa ocupa mais espaço */  
+    text-align: center; /* Centraliza o texto */  
+}

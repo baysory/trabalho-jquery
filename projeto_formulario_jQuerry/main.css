@@ -1,0 +1,125 @@
+/* Reset básico */  
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}  
+
+body {  
+    font-family: Arial, sans-serif; 
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;   
+    justify-content: center;  
+    height: 100vh;   
+    background-color: #e9e6e6; 
+    border: solid;
+}  
+
+header {  
+    margin-bottom: 50px;
+}
+
+.completed {  
+    background-color: green; /* Cor de fundo para tarefas concluídas */  
+    color: white; /* Cor do texto para contraste */  
+    text-decoration: line-through; /* Adiciona riscado ao texto */  
+    transition: background-color 0.5s ease, text-decoration 0.5s ease; /* Suave transição para a cor de fundo e riscado */  
+}
+
+.form-task {  
+    margin-bottom: 2px;
+    width: 100%; 
+    max-width: 800px;   
+    display: flex;   
+    justify-content: center;  
+    align-items: center;   
+}  
+
+.form-task input {  
+    flex: 1;  
+    margin-right: 10px;
+    font-size: 25px;
+}  
+
+.list-task {  
+    width: 100%;
+    max-width: 800px;
+    border:  1px solid;
+}  
+
+.my-task {  
+    list-style-type: none;   
+    padding: 100px;   
+}  
+
+.items-task {  
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;   
+    padding: 10px;  
+    margin: 5px 0;   
+    background-color: white; 
+    border-radius: 4px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animação de transição */  
+    opacity: 0; /* Inicialmente invisível */  
+    transform: translateX(100%); /* Começa fora da tela à direita */  
+}  
+
+.items-task.show {  
+    opacity: 1; /* Torna visível */  
+    transform: translateX(0); /* Movimento para a posição original */  
+}  
+
+.items-task.remove-task {  
+    opacity: 0; /* Torna invisível */  
+    transform: translateX(-100%); /* Sai da tela à esquerda */  
+    transition: opacity 1s ease, transform 1s ease; /* Animação de remoção */  
+}  
+
+.items-task.completed {  
+    background-color: green; /* Cor de fundo para tarefas concluídas */  
+    color: white; /* Cor do texto para contraste */  
+    transition: background-color 0.5s ease; /* Transição suave para a cor de fundo */  
+}  
+
+button {  
+    background-color: #0970dd;
+    color: white;  
+    border: none;  
+    border-radius: 4px;  
+    padding: 5px 10px;  
+    cursor: pointer; 
+    font-size: 25px;
+}  
+
+button:hover {  
+    background-color: #0056b3; /* Fundo do botão ao passar o mouse */  
+}  
+
+button.button-delete {  
+    display: none;  
+}  
+
+button.button-completed {  
+    display: none;  
+}  
+
+.icon {  
+    width: 20px;   
+    height: 20px;   
+}  
+
+
+.items-task:hover .button-delete,  
+.items-task:hover .button-completed {  
+    display: block;  
+    opacity: 1; 
+    transition: opacity 0.3s ease; 
+}  
+@media (max-width: 600px) {  
+    .form-task, .list-task {  
+        width: 90%;   
+    }  
+}
